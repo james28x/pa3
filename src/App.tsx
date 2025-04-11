@@ -7,7 +7,7 @@ import './App.css'
 
 function App() {
   return (
-    <Router>
+    <Router basename='/pa3'>
       <Routes>
         <Route path="/" element={<Menu />} />
         <Route path="/value-iteration" element={<ValueIteration />} />

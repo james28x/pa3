@@ -54,7 +54,7 @@ const PolicyIteration: React.FC = () => {
         })
         // Get the direction corresponding to the maximum Q-value
         const qValues: Record<string, number> = cell.qValues || {};
-        const [bestDirection, maxValue] = Object.entries(qValues).reduce<[string, number]>((max, [key, val]) => 
+        const [bestDirection, _] = Object.entries(qValues).reduce<[string, number]>((max, [key, val]) => 
             (val as number) > max[1] ? [key, val as number] : max, 
             [Object.keys(qValues)[0], qValues[Object.keys(qValues)[0]] as number]);
         cell.direction = bestDirection as 'north' | 'south' | 'west' | 'east';
